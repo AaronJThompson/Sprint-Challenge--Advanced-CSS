@@ -3,15 +3,20 @@
 header{
 
     &.navigation{
-
+        max-width: @nav-maxWidth;
+        min-height: @nav-minHeight;
+        width: 100%;
+        margin: 0 auto;  
+        background-color: @nav-bg;
+        .flex-column(space-around, center);
         h1{
-
+            font-size:@fontSize-xLarge;
         }
 
         nav{
 
             a{
-                
+
             }
         }
     }
