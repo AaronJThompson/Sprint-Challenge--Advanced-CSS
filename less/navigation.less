@@ -14,9 +14,12 @@ header{
         }
 
         nav{
-
+            .flex-row(space-around, baseline);
+            max-width: @nav-linkWidth;
+            width: 100%;
             a{
-
+                text-decoration: none;
+                font-size: @fontSize-Small;
             }
         }
     }
