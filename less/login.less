@@ -1,0 +1,22 @@
+.login{
+    margin-top: @nav-minHeight;
+
+    .login-form{
+        margin: @login-margin;
+        .flex-column(space-between);
+        
+        input{
+            background-color: white;
+            .login-border;
+            padding: .5rem;
+            font-size: @fontSize-Medium;
+            text-align: center;
+            margin-bottom: .5rem;
+
+            &:last-child{
+                .button-secondary(@fontSize-Medium, @btn-bg-color, white, .5rem);
+                .login-border;
+            }
+        }
+    }
+}

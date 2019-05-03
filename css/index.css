@@ -7,6 +7,10 @@
 .rounded-border-large {
   border-radius: 20px;
 }
+.login-border {
+  border-radius: 10px;
+  border: 0.1rem solid #5E6164;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -321,4 +325,40 @@ footer {
     padding: 15px;
     margin-top: 20px;
   }
+}
+.login {
+  margin-top: 10rem;
+}
+.login .login-form {
+  margin: 20rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.login .login-form input {
+  background-color: white;
+  border-radius: 10px;
+  border: 0.1rem solid #5E6164;
+  padding: 0.5rem;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.login .login-form input:last-child {
+  border: none;
+  background-color: #22283A;
+  font-size: 2.8rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-family: inherit;
+  padding: 0.5rem;
+  transition: 0.1s ease-in-out;
+  border-radius: 10px;
+  border: 0.1rem solid #5E6164;
+}
+.login .login-form input:last-child:hover {
+  background-color: white;
+  color: #22283A;
 }
