@@ -24,3 +24,18 @@
 .rounded-border-large{
     border-radius: 20px;
 }
+
+.button-secondary(
+    @fontSize: @fontSize-Small,
+    @bg-color: @btn-bg-color,
+    @padding: 1em 1em
+    ){
+    border: none;
+    background-color: @bg-color;
+    font-size: @fontSize;
+    .rounded-border-small;
+    color: white;
+    font-weight: bold;
+    font-family: inherit;
+    padding: @padding;
+}
