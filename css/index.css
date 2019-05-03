@@ -209,6 +209,12 @@ header.navigation nav a {
 header.navigation:hover {
   opacity: 1;
 }
+@media (max-width: 500px) {
+  header.navigation {
+    position: relative;
+    opacity: 1;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -232,6 +238,11 @@ footer {
 }
 .home .intro p {
   padding: 0 15px;
+}
+@media (max-width: 500px) {
+  .home .intro {
+    margin-top: 0;
+  }
 }
 .home .space-images {
   display: flex;
@@ -378,4 +389,9 @@ footer {
   position: absolute;
   z-index: -1;
   border-radius: 20px;
+}
+@media (max-width: 500px) {
+  .login {
+    margin-top: 0;
+  }
 }
