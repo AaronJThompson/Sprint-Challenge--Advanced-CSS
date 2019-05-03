@@ -74,6 +74,10 @@
       .btn {
         .button-secondary(@fontSize-Small,@btn-bg-color,white,.5em 1.5em);
       }
+
+      @media @phone{
+        width: 100%;
+      }
     }
 
     .walk-img {
@@ -85,6 +89,15 @@
         height: auto;
         .rounded-border-medium;
       }
+      @media @phone{
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    @media @phone{
+      flex-direction: column-reverse;
+      padding: 15px;
     }
   }
 }// home
