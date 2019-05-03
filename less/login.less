@@ -2,9 +2,9 @@
     margin-top: @nav-minHeight;
 
     .login-form{
-        margin: @login-margin;
+        padding: @login-padding;
         .flex-column(space-between);
-        
+        position: relative;
         input{
             background-color: white;
             .login-border;
@@ -18,5 +18,21 @@
                 .login-border;
             }
         }
+        &::after{
+            width: inherit;
+            height: inherit;
+            content: "";
+            background-image: url("../img/login-bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            .rounded-border-large;
+      }
     }
 }
