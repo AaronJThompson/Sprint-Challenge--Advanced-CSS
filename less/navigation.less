@@ -1,1 +1,41 @@
 // Navigation code here
+
+header{
+
+    &.navigation{
+        max-width: @nav-maxWidth;
+        min-height: @nav-minHeight;
+        width: 100%;
+        margin: 0 auto;
+        background-color: @nav-bg;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        position: fixed;
+        opacity: 0.2;
+        transition: 0.3s ease-in-out;
+        .flex-column(space-around, center);
+        h1{
+            font-size:@fontSize-xLarge;
+        }
+
+        nav{
+            .flex-row(space-around, baseline);
+            max-width: @nav-linkWidth;
+            width: 100%;
+            a{
+                text-decoration: none;
+                font-size: @fontSize-Small;
+            }
+        }
+        &:hover{
+            opacity: 1;
+        }
+        @media @phone{
+            position: relative;
+            opacity: 1;
+        }
+
+    }
+}

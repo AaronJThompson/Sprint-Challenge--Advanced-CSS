@@ -34,13 +34,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+A: An adaptive website will use specific layouts for specific devices. It is closer to fixed layout than fluid in terms of sizes. Adaptive will use breakpoints with mostly hardcoded sizes to fit devices that are pre-selected.
+A fully responsive website on the other hand will use a mix of all layout designs, leaning on adaptive-fluid designs. Sizes are propotional to the screen and will scale and wrap acorrding to the viewport, using breakpoints for major shifts
+in layout when needed. They are also better for accessibility, using fonts sizes that scale with the default font size. Elements should also scale their padding and margins with changes in font size. Adaptive would likely have hardcoded font sizes
+with margins and padding that don't scale with increases in font size.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+A: Mobile first is designing the majority of your general styles to fit mobile, where the default CSS where no breakpoints are triggered fit the smallest screen size supported. Breakpoints are triggered as screen sizes increases and thus styles and layouts made to fit.
+Desktop first on the otherhand is designed to fit desktop screens first, using breakpoints with styles and layouts to fit smaller and smaller screen sizes. The Majority of the CSS is made to fit large desktop screens when no breakpoints are triggered.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+A: First it's important to note that the majority of browsers use a default font-size of 16px, most web developers consider this a web standard. Setting the font-size for all elements to 62.5% of the default font size means that 1rem (100% of root font size) means that 1rem = 10px when the browser
+is using its default font size. This makes it easier for web developers to fit design requirements which are usually provided in px's, whilst still using responsive units for accessibility. It requires less math to convert units of 10px per unit than 16px per unit.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+A: preprocessing is when alternative languages/syntaxes are using to write styles, then are converted to CSS for the browser. Preprocessing languages such as Less or Sass aim to provide a solution to some of
+CSS's problems for developers, such as the inabilty to use nesting, variables or components. It allows developers to make they're code more readable, maintainable and easier to write. A preprocessor will take our code written in the chosen
+language and compile it into a CSS file that can then be deployed.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+A: My favourite concept is nesting. It makes it much easier for me to change specific parts of the page without having to write long selectors. It also keeps my code DRYer without hundreds of rules that could be nested.
+Mixins give me the most trouble. I think they're syntax could be easier as in Less they are similar to class selectors. They are laid out too similar to normal selected styles when I think that they should be more similar to components in other languages.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 

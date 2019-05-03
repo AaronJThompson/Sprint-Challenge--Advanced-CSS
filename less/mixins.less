@@ -1,1 +1,54 @@
 // Mixins Here
+.flex-row(@justify: flex-start, @align: stretch){
+    display: flex;
+    flex-direction: row;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.flex-column(@justify: flex-start, @align: stretch){
+    display: flex;
+    flex-direction: column;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.rounded-border-small{
+    border-radius: 5px;
+}
+
+.rounded-border-medium{
+    border-radius: 10px;
+}
+
+.rounded-border-large{
+    border-radius: 20px;
+}
+
+.button-secondary(
+    @fontSize: @fontSize-Small,
+    @bg-color: @btn-bg-color,
+    @fontColor: white,
+    @padding: 1em 1em,
+    @transitionDur: 0.1s
+    ){
+    border: none;
+    background-color: @bg-color;
+    font-size: @fontSize;
+    .rounded-border-small;
+    color: @fontColor;
+    font-weight: bold;
+    font-family: inherit;
+    padding: @padding;
+    transition: @transitionDur ease-in-out;
+
+    &:hover{
+        background-color: @fontColor;
+        color: @bg-color;
+    }
+}
+
+.login-border{
+    .rounded-border-medium;
+    border:0.1rem solid @shuttle-gray;
+}

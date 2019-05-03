@@ -1,0 +1,41 @@
+.login{
+    margin-top: @nav-minHeight;
+
+    .login-form{
+        padding: @login-padding;
+        .flex-column(space-between);
+        position: relative;
+        input{
+            background-color: white;
+            .login-border;
+            padding: .5rem;
+            font-size: @fontSize-Medium;
+            text-align: center;
+            margin-bottom: .5rem;
+
+            &:last-child{
+                .button-secondary(@fontSize-Medium, @btn-bg-color, white, .5rem);
+                .login-border;
+            }
+        }
+        &::after{
+            width: inherit;
+            height: inherit;
+            content: "";
+            background-image: url("../img/login-bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            .rounded-border-large;
+      }
+    }
+    @media @phone{
+        margin-top: 0;
+    }
+}
