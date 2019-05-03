@@ -206,6 +206,8 @@ footer {
   align-items: center;
 }
 .home .intro img {
+  width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 .home .intro h2 {
