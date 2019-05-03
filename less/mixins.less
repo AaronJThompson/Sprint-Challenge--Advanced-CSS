@@ -28,14 +28,22 @@
 .button-secondary(
     @fontSize: @fontSize-Small,
     @bg-color: @btn-bg-color,
-    @padding: 1em 1em
+    @fontColor: white,
+    @padding: 1em 1em,
+    @transitionDur: 0.1s
     ){
     border: none;
     background-color: @bg-color;
     font-size: @fontSize;
     .rounded-border-small;
-    color: white;
+    color: @fontColor;
     font-weight: bold;
     font-family: inherit;
     padding: @padding;
+    transition: @transitionDur ease-in-out;
+
+    &:hover{
+        background-color: @fontColor;
+        color: @bg-color;
+    }
 }
